@@ -42,7 +42,7 @@ var numOfSlices = 8;
 console.log(favouriteFood);//prints pizza
 console.log(numOfSlices);// prints 8
 
-//CREATIN A VARIABLE let
+//CREATING A VARIABLE let
 
 /*Create a Variable: let
 The let keyword signals that the variable can be reassigned a different value.
