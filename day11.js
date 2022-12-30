@@ -223,6 +223,116 @@ console.log(pastaIndex);
 
 
 
+//ARRAYS AND FUNCTIONS
+/*
+Throughout the lesson we went over arrays being mutable, or changeable. 
+Well what happens if we try to change an array inside a function? Does the array keep the change after the function call or is it scoped to inside the function?
+
+Take a look at the following example where we call .push() on an array inside a function. Recall, the .push() method mutates, or changes, an array:
+
+
+
+*/
+
+function changeArray(array) {
+  array.push('change');
+  console.log(array);
+  return array;
+}
+
+
+
+const flowers = ['peony', 'daffodil', 'marigold'];
+ 
+function addFlower(arr) {
+  arr.push('lily');
+}
+ 
+addFlower(flowers);
+ 
+console.log(flowers); // Output: ['peony', 'daffodil', 'marigold', 'lily']
+
+/*
+Let’s go over what happened in the example:
+
+The flowers array that has 3 elements.
+The function addFlower() has a parameter of arr uses .push() to add a 'lily' element into arr.
+We call addFlower() with an argument of flowers which will execute the code inside addFlower.
+We check the value of flowers and it now includes the 'lily' element! The array was mutated!
+
+*/
+
+
+//EXERCISE
+const concept = ['arrays', 'can', 'be', 'mutated'];
+
+function changeArr(arr){
+  arr[3] = 'MUTATED';
+}
+
+changeArr(concept);
+console.log(concept);
+
+function removeElement(newArr) {
+  newArr.pop();
+}
+
+removeElement(concept);
+
+console.log(concept);
+
+
+
+
+//NESTED ARRAYS
+/*
+
+The nested array is an array of arrays.
+Earlier we mentioned that arrays can store other arrays. 
+When an array contains another array it is known as a nested array.
+ Examine the example below:
+
+*/
+
+const nestedArr = [[1], [2, 3]];
+ 
+console.log(nestedArr[1]); // Output: [2, 3]
+
+/*
+Notice that nestedArr[1] will grab the element in index 1 which is the array [2, 3].
+ Then, if we wanted to access the elements within the nested array we can chain, or add on, more bracket notation with index values.
+
+
+*/
+const nestedArr = [[1], [2, 3]];
+ 
+console.log(nestedArr[1]); // Output: [2, 3]
+console.log(nestedArr[1][0]); // Output: 2
+
+
+
+
+
+/*
+In the second console.log() statement, we have two bracket notations chained to nestedArr. 
+We know that nestedArr[1] is the array [2, 3]. Then to grab the first element from that array, we use nestedArr[1][0] and we get the value of 2.
+
+*/
+
+
+
+//EXERCISES
+const numberClusters = [[1, 2], [3, 4], [5, 6]];
+
+const target = numberClusters[2][1];
+console.log(target); //output '6
+
+
+
+
+
+
+
 
 
 
